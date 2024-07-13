@@ -1,0 +1,34 @@
+.logo {
+    margin-top: 35px;
+    margin-bottom: 75px;
+}
+
+.input, .arrow-button {
+    border-radius: 25px; /* round the corners of both elements */
+}
+
+.announcement {
+    width: 40%; /* set the max width of h3 element to ensure words wrap within this limit */
+    word-wrap: break-word; /* long words will break onto the next line instead of overflowing the container */
+    margin-bottom: 35px;
+}
+
+.container {
+    position: relative; 
+    display: inline-block; /* ensures .container only takes up as much width as its content */
+}
+
+.input {
+    height: 38px;
+    width: 275px;
+}
+
+.arrow-button {
+    height: 42px;
+    width: 80px;
+    position: absolute; 
+    /* align .arrow-button to top right corner */
+    top: 0; 
+    right: 0; 
+    z-index: 1; /* ensure the arrow button appears above the input field */
+}
