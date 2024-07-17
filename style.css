@@ -9,7 +9,7 @@
 
 .input-wrapper {
     position: relative; 
-    display: inline-block; /* ensures .container only takes up as much width as its content */
+    display: inline-block; /* ensures .input-wrapper only takes up as much width as its child content */
     margin-left: 80px;
     margin-top: 10px;
 }
@@ -48,7 +48,7 @@
     height: 42px;
     width: 80px;
     position: absolute; 
-    /* align .arrow-button to top right corner */
+    /* align .arrow-button to top right corner of .input-wrapper */
     top: 0; 
     right: 0; 
     z-index: 1; /* ensure the arrow button appears above the input field */
@@ -61,3 +61,38 @@
 .hero-wrapper {
     flex: 1;
 }
+
+/* font, color, and hover/focus states begin here */
+
+h1 {
+    color: hsl(0, 36%, 70%);
+}
+
+h3 {
+    color: hsl(0, 36%, 70%);
+}
+
+.coming {
+    color: hsl(0, 6%, 24%);
+}
+
+.soon {
+    color: hsl(0, 6%, 24%);
+}
+
+.input::placeholder {
+    padding-left: 20px;
+}
+
+.input:hover {
+    outline: 2px solid #007bff;
+}
+
+.arrow-button:hover {
+    outline: 2px solid #007bff; 
+}
+
+.input:focus {
+    outline: 2px solid #007bff; 
+}
+
