@@ -24,19 +24,18 @@
     margin-top: 30px;
 }
 
+.hero:hover {
+    opacity: 0.5;
+}
+
 .logo {
     margin-top: 35px;
     margin-bottom: 50px;
 }
 
 .input, .arrow-button {
-    border-radius: 25px; /* round the corners of both elements */
-}
-
-.announcement {
-    width: 85%; /* set the max width of h3 element to ensure words wrap within this limit */
-    word-wrap: break-word; /* long words will break onto the next line instead of overflowing the container */
-    margin-bottom: 35px;
+    border-radius: 25px;
+    border: 2px solid hsl(359, 26%, 78%);
 }
 
 .input {
@@ -62,26 +61,47 @@
     flex: 1;
 }
 
-/* font, color, and hover/focus states begin here */
+@font-face {
+    font-family: "JosefinSans-ExtraLight"; 
+    src: url("/home/vboxuser/repos/coming-soon-page/JosefinSans-ExtraLight.ttf"); 
+}
+
+@font-face {
+    font-family: "JosefinSans-Regular"; 
+    src: url("/home/vboxuser/repos/coming-soon-page/JosefinSans-Regular.ttf"); 
+}
 
 h1 {
     color: hsl(0, 36%, 70%);
+    font-family: "JosefinSans-ExtraLight"; 
+}
+
+.coming {
+    color: hsl(0, 6%, 24%);
+    font-family: "JosefinSans-Regular";
+}
+
+.soon {
+    color: hsl(0, 6%, 24%);
+    font-family: "JosefinSans-Regular";
+}
+
+.announcement {
+    width: 60%; /* set the max width of h3 element to ensure words wrap within this limit */
+    word-wrap: break-word; /* long words will break onto the next line instead of overflowing the container */
+    margin-bottom: 35px;
+    font-family: "JosefinSans-ExtraLight";
+    font-size: small;
+    line-height: 1.6;
 }
 
 h3 {
     color: hsl(0, 36%, 70%);
 }
 
-.coming {
-    color: hsl(0, 6%, 24%);
-}
-
-.soon {
-    color: hsl(0, 6%, 24%);
-}
-
 .input::placeholder {
     padding-left: 20px;
+    font-family: "JosefinSans-ExtraLight";
 }
 
 .input:hover {
@@ -96,3 +116,10 @@ h3 {
     outline: 2px solid #007bff; 
 }
 
+.input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.arrow-button {
+    background-color: hsl(0, 36%, 70%);;
+}
