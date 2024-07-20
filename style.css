@@ -61,36 +61,29 @@
     flex: 1;
 }
 
-@font-face {
-    font-family: "JosefinSans-ExtraLight"; 
-    src: url("/home/vboxuser/repos/coming-soon-page/JosefinSans-ExtraLight.ttf"); 
-}
-
-@font-face {
-    font-family: "JosefinSans-Regular"; 
-    src: url("/home/vboxuser/repos/coming-soon-page/JosefinSans-Regular.ttf"); 
-}
-
 h1 {
     color: hsl(0, 36%, 70%);
-    font-family: "JosefinSans-ExtraLight"; 
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
 }
 
 .coming {
     color: hsl(0, 6%, 24%);
-    font-family: "JosefinSans-Regular";
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
 }
 
 .soon {
     color: hsl(0, 6%, 24%);
-    font-family: "JosefinSans-Regular";
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
 }
 
 .announcement {
     width: 60%; /* set the max width of h3 element to ensure words wrap within this limit */
     word-wrap: break-word; /* long words will break onto the next line instead of overflowing the container */
     margin-bottom: 35px;
-    font-family: "JosefinSans-ExtraLight";
+    font-family: 'Josefin Sans', sans-serif; 
     font-size: small;
     line-height: 1.6;
 }
@@ -101,7 +94,7 @@ h3 {
 
 .input::placeholder {
     padding-left: 20px;
-    font-family: "JosefinSans-ExtraLight";
+    font-family: 'Josefin Sans', sans-serif; 
 }
 
 .input:hover {
