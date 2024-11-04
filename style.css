@@ -1,130 +1,64 @@
 html, body {
-    /* margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100px; */
-    overflow: hidden;
-}
-
-.info-wrapper {
-    background-image: url(/home/vboxuser/repos/coming-soon-page/bg-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100vw;
     height: 100vh;
-    flex: 1;
 }
 
-.input-wrapper {
-    position: relative; 
-    display: inline-block; /* ensures .input-wrapper only takes up as much width as its child content */
-    margin-left: 80px;
-    margin-top: 10px;
+* {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-.info {
-    margin-left: 80px;
-    margin-top: 40px;
+.container {
+    display: grid;
+    grid-template-areas: 
+        "icon-wrapper hero-wrapper"
+        "info-wrapper hero-wrapper";
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 4fr;
+    background-image: url(bg-pattern-desktop.svg);
+    height: 100vh;
 }
 
 .icon-wrapper {
-    margin-left: 80px;
-    margin-top: 30px;
-}
-
-.hero:hover {
-    opacity: 0.5;
-}
-
-.logo {
-    margin-top: 35px;
-    margin-bottom: 50px;
-}
-
-.input, .arrow-button {
-    border-radius: 25px;
-    border: 2px solid hsl(359, 26%, 78%);
-}
-
-.input {
-    height: 38px;
-    width: 275px;
-}
-
-.arrow-button {
-    height: 42px;
-    width: 80px;
-    position: absolute; 
-    /* align .arrow-button to top right corner of .input-wrapper */
-    top: 0; 
-    right: 0; 
-    z-index: 1; /* ensure the arrow button appears above the input field */
-}
-
-.flex-container {
-    display: flex;
+    grid-area: icon-wrapper;
+    padding: 10%;
+    height: auto;
 }
 
 .hero-wrapper {
-    flex: 1;
+    grid-area: hero-wrapper;
+    height: auto;
 }
 
-h1 {
-    color: hsl(0, 36%, 70%);
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
+.hero-wrapper img {
+    width: 100%;
 }
 
-.coming {
-    color: hsl(0, 6%, 24%);
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
+.info-wrapper {
+    grid-area: info-wrapper;
+    padding: 10%;
+    height: auto;
 }
 
-.soon {
-    color: hsl(0, 6%, 24%);
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-}
+@media (max-width: 767px) {
+    .container {
+        display: grid;
+        display: grid;
+        grid-template-areas: 
+            "icon-wrapper"
+            "hero-wrapper"
+            "info-wrapper";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 
-.announcement {
-    width: 60%; /* set the max width of h3 element to ensure words wrap within this limit */
-    word-wrap: break-word; /* long words will break onto the next line instead of overflowing the container */
-    margin-bottom: 35px;
-    font-family: 'Josefin Sans', sans-serif; 
-    font-size: small;
-    line-height: 1.6;
-}
-
-h3 {
-    color: hsl(0, 36%, 70%);
-}
-
-.input::placeholder {
-    padding-left: 20px;
-    font-family: 'Josefin Sans', sans-serif; 
-}
-
-.input:hover {
-    outline: 2px solid #007bff;
-}
-
-.arrow-button:hover {
-    outline: 2px solid #007bff; 
-}
-
-.input:focus {
-    outline: 2px solid #007bff; 
-}
-
-.input::placeholder {
-    color: hsl(0, 36%, 70%);
-}
-
-.arrow-button {
-    background-color: hsl(0, 36%, 70%);;
-}
-
-.hero .logo {
-    max-width: 100%;
+    .icon-wrapper {
+        grid-area: icon-wrapper;
+    }
+    
+    .hero-wrapper {
+        grid-area: hero-wrapper;
+    }
+    
+    .info-wrapper {
+        grid-area: info-wrapper;
+    }
 }
