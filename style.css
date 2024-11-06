@@ -6,6 +6,7 @@ html, body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* container styles */
 .container {
     display: grid;
     grid-template-areas: 
@@ -38,9 +39,68 @@ html, body {
     height: auto;
 }
 
-@media (max-width: 767px) {
+/* text styles */
+.we {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.info-wrapper h1 {
+    font-size: 2.5em;
+}
+
+.info-wrapper h3 {
+    line-height: 1.5;
+    color: hsl(0, 36%, 70%);
+}
+
+.coming, .soon {
+    color: hsl(0, 6%, 24%);
+}
+
+/* inputs */
+.input-wrapper {
+    position: relative; 
+    display: inline-block;
+}
+
+.input {
+    height: 30px;
+    width: 300px;
+    padding-left: 5px;
+    vertical-align: bottom;
+    border-radius: 15px;
+    border: 1px solid hsl(0, 36%, 70%);
+    text-indent: 10px;
+}
+
+.input:hover {
+    border: 2px solid hsl(0, 36%, 70%);
+}
+
+::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.button {
+    height: 34px;
+    width: 65px;
+    border-radius: 15px;
+    border: 1px solid hsl(0, 36%, 70%);
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1; 
+}
+
+.button:hover {
+    opacity: 0.5; 
+}
+
+/* mobile */
+@media (max-width: 768px) {
     .container {
-        display: grid;
         display: grid;
         grid-template-areas: 
             "icon-wrapper"
@@ -48,6 +108,8 @@ html, body {
             "info-wrapper";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        background-size: cover;
+        background-position: center;
     }
 
     .icon-wrapper {
