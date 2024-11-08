@@ -98,6 +98,20 @@ html, body {
     opacity: 0.5; 
 }
 
+/* JS */
+.invalid {
+    border: 2px solid red;
+    background-image: url('icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 70px center;
+}
+
+.error-message {
+    color: hsl(0, 74%, 74%);
+    margin-top: 5px;
+    display: none; /* Initially hidden */
+}
+
 /* mobile */
 @media (max-width: 768px) {
     .container {

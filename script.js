@@ -1,15 +1,25 @@
-const arrowButton = document.querySelector(".arrow-button");
+const email = document.querySelector("#email");
+const submitButton = document.querySelector(".button");
+const errorMessage = document.querySelector("#error-message");
 
-function clicked() {
-    const inputValue = document.querySelector(".input").value;
+submitButton.addEventListener("click", submitForm);
 
-    const emailCheck = /^\S+@\S+\.\S+$/;
-
-    if (emailCheck.test(inputValue)) {
-        alert("Congrats! You're all signed in.")
-    } else {
-        alert("Sorry, that's an invalid email.")
-    }
+function validateEmail(emailValue) {
+  return emailValue.trim() === "" || !/\S+@\S+\.\S+/.test(emailValue); // if empty OR does not match email pattern
 }
 
-arrowButton.addEventListener("click", clicked)
+function submitForm(e) {
+  e.preventDefault(); // prevent default submit behaviour
+
+  const emailValue = email.value; 
+  const isInvalid = validateEmail(emailValue); 
+
+  if (isInvalid) {
+    email.classList.add("invalid"); 
+    errorMessage.style.display = "block"; 
+  } else {
+    alert("Form submitted successfully.");
+    email.classList.remove("invalid");
+    errorMessage.style.display = "none"; 
+  }
+}
